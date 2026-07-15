@@ -3,7 +3,9 @@
 
 int main()
 {
-
+	int a =0;
+	int b = 0;
+	int result = 0;
 
         bool start = true;
         int opt = 0;
@@ -18,6 +20,14 @@ int main()
 	case 0:
 		printf("Bye!");
 		start = false;
+		break;
+	case 1: 
+		printf("A:");
+		scanf("%d",&a);
+		printf("\nB:");
+                scanf("%d",&b);
+		result = a + b;
+		printf("Result :", result);
 		break;
 	default:
         	printf("Invalid Operator Input\n");
