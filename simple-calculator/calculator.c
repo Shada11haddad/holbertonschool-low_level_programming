@@ -25,9 +25,9 @@ int main()
 		printf("A:");
 		scanf("%d",&a);
 		printf("\nB:");
-                scanf("%d",&b);
+                scanf("%d\n",&b);
 		result = a + b;
-		printf("Result :", result);
+		printf("Result : %d\n", result);
 		break;
 	default:
         	printf("Invalid Operator Input\n");
