@@ -37,6 +37,23 @@ int main()
                 result = a - b;
                 printf("Result : %d\n", result);
                 break;
+	case 3:
+                printf("A:");
+                scanf("%d",&a);
+                printf("\nB:");
+                scanf("%d\n",&b);
+                result = a *  b;
+                printf("Result : %d\n", result);
+                break;
+	case 4:
+                printf("A:");
+                scanf("%d",&a);
+                printf("\nB:");
+                scanf("%d\n",&b);
+                result = a / b;
+                printf("Result : %d\n", result);
+                break;
+
 	default:
         	printf("Invalid Operator Input\n");
 	}
