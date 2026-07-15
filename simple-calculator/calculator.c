@@ -18,6 +18,7 @@ int main()
 	case 0:
 		printf("Bye!");
 		start = false;
+		break;
 	default:
         	printf("Invalid Operator Input\n");
 	}
