@@ -10,14 +10,18 @@ int main()
         while (start == true){
         printf("Please select :\n 1) Add\n 2)Subtract\n 3)Mulitply\n 4)Divide\n 0) Quit\n ");
         scanf("%d" , &opt);
-        if (opt==0){
-                printf("Bye!");
-                start = false;
-                break;
-        }
+       
+	
 
+	 	switch(opt)
+	{
+	case 0:
+		printf("Bye!");
+		start = false;
+	default:
+        	printf("Invalid Operator Input\n");
+	}
 }
-
         return 0;
 
 }
