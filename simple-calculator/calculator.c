@@ -50,8 +50,11 @@ int main()
                 scanf("%d",&a);
                 printf("\nB:");
                 scanf("%d\n",&b);
+		if(b==0){
+		printf("Error: division by zero");
+		}else{
                 result = a / b;
-                printf("Result : %d\n", result);
+                printf("Result : %d\n", result);}
                 break;
 
 	default:
