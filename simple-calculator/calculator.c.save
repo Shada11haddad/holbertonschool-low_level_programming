@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+	int a =0;
+	int b = 0;
+	int result = 0;
+
+        bool start = true;
+        int opt = 0;
+        while (start == true){
+        printf("Please select :\n 1) Add\n 2)Subtract\n 3)Mulitply\n 4)Divide\n 0) Quit\n ");
+        scanf("%d" , &opt);
+       
+	printf("A:");   
+        scanf("%d",&a);
+        printf("\nB:");
+        scanf("%d\n",&b);
+	if 
+
+	 	switch(opt)
+	{
+	case 0:
+		printf("Bye!");
+		start = false;
+		break;
+	case 1: 
+		result = a + b;
+		printf("Result : %d\n", result);
+		break;
+	case 2:
+                result = a - b;
+                printf("Result : %d\n", result);
+                break;
+	case 3:
+                result = a *  b;
+                printf("Result : %d\n", result);
+                break;
+	case 4:
+               if(b==0){
+		printf("Error: division by zero");
+		}else{
+                result = a / b;
+                printf("Result : %d\n", result);}
+                break;
+
+	default:
+        	printf("Invalid Operator Input\n");
+	}
+}
+        return 0;
+
+}
+
+
+
+

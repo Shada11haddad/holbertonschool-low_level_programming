@@ -6,13 +6,14 @@ int main()
 	int a =0;
 	int b = 0;
 	int result = 0;
-
+	char trash = ' ';
         bool start = true;
         int opt = 0;
         while (start == true){
         printf("Please select :\n 1) Add\n 2)Subtract\n 3)Mulitply\n 4)Divide\n 0) Quit\n ");
-        scanf("%d" , &opt);
-       
+        while (trash != '\n') {
+	 scanf("%d" , &opt);
+	 
 	
 
 	 	switch(opt)
@@ -21,36 +22,43 @@ int main()
 		printf("Bye!");
 		start = false;
 		break;
-	case 1: 
+	case 1:
 		printf("A:");
-		scanf("%d",&a);
-		printf("\nB:");
-                scanf("%d\n",&b);
+       		if(scanf("%d",&a) != 1){
+        	printf("Invalid number");}
+         	printf("\nB:");
+        	if(scanf("%d",&b) != 1){
+        	printf("Invalid number");} 
 		result = a + b;
 		printf("Result : %d\n", result);
 		break;
 	case 2:
-                printf("A:");
-                scanf("%d",&a);
+ 		printf("A:");
+                if(scanf("%d",&a) != 1){
+                printf("Invalid number");}
                 printf("\nB:");
-                scanf("%d\n",&b);
+                if(scanf("%d",&b) != 1){
+                printf("Invalid number");}
                 result = a - b;
                 printf("Result : %d\n", result);
                 break;
 	case 3:
-                printf("A:");
-                scanf("%d",&a);
+		 printf("A:");
+                if(scanf("%d",&a) != 1){
+                printf("Invalid number");}
                 printf("\nB:");
-                scanf("%d\n",&b);
+                if(scanf("%d",&b) != 1){
+                printf("Invalid number");}
                 result = a *  b;
                 printf("Result : %d\n", result);
                 break;
 	case 4:
-                printf("A:");
-                scanf("%d",&a);
-                printf("\nB:");
-                scanf("%d\n",&b);
-		if(b==0){
+	 	printf("A:");
+                if(scanf("%d",&a) != 1){
+                printf("Invalid number");}else{
+                printf("\nB:");}
+                if(scanf("%d",&b) != 1){
+                printf("Invalid number");} else if(b==0){
 		printf("Error: division by zero");
 		}else{
                 result = a / b;
