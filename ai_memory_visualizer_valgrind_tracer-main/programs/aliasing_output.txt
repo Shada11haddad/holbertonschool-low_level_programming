@@ -1,0 +1,45 @@
+==3444== Memcheck, a memory error detector
+==3444== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==3444== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==3444== Command: ./aliasing_example
+==3444== Parent PID: 3196
+==3444== 
+==3444== Invalid read of size 4
+==3444==    at 0x40012F2: main (aliasing_example.c:42)
+==3444==  Address 0x4a91488 is 8 bytes inside a block of size 20 free'd
+==3444==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==3444==    by 0x40012CE: main (aliasing_example.c:38)
+==3444==  Block was alloc'd at
+==3444==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==3444==    by 0x40011E4: make_numbers (aliasing_example.c:12)
+==3444==    by 0x4001272: main (aliasing_example.c:30)
+==3444== 
+==3444== Invalid write of size 4
+==3444==    at 0x4001312: main (aliasing_example.c:44)
+==3444==  Address 0x4a9148c is 12 bytes inside a block of size 20 free'd
+==3444==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==3444==    by 0x40012CE: main (aliasing_example.c:38)
+==3444==  Block was alloc'd at
+==3444==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==3444==    by 0x40011E4: make_numbers (aliasing_example.c:12)
+==3444==    by 0x4001272: main (aliasing_example.c:30)
+==3444== 
+==3444== Invalid read of size 4
+==3444==    at 0x4001320: main (aliasing_example.c:45)
+==3444==  Address 0x4a9148c is 12 bytes inside a block of size 20 free'd
+==3444==    at 0x48538BF: free (vg_replace_malloc.c:990)
+==3444==    by 0x40012CE: main (aliasing_example.c:38)
+==3444==  Block was alloc'd at
+==3444==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==3444==    by 0x40011E4: make_numbers (aliasing_example.c:12)
+==3444==    by 0x4001272: main (aliasing_example.c:30)
+==3444== 
+==3444== 
+==3444== HEAP SUMMARY:
+==3444==     in use at exit: 0 bytes in 0 blocks
+==3444==   total heap usage: 2 allocs, 2 frees, 1,044 bytes allocated
+==3444== 
+==3444== All heap blocks were freed -- no leaks are possible
+==3444== 
+==3444== For lists of detected and suppressed errors, rerun with: -s
+==3444== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
